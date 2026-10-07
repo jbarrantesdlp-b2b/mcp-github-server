@@ -2,12 +2,13 @@
   "name": "mcp-github-server",
   "version": "1.0.0",
   "type": "module",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "npx mcp-proxy --port $PORT -- npx -y @modelcontextprotocol/server-github"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0",
-    "@modelcontextprotocol/server-github": "latest",
-    "express": "^4.21.0"
+    "@modelcontextprotocol/sdk": "^1.0.1",
+    "@modelcontextprotocol/server-github": "^0.6.2",
+    "mcp-proxy": "^6.7.19"
   }
+}
